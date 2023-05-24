@@ -9,11 +9,17 @@ class Message extends Component {
         };
     }
 
+    changeMessage() {
+        this.setState({
+            message: 'Thank you for subscribing'
+        });
+    }
+
   render() {
     return (
         <div>
             <h1>{this.state.message}</h1>
-            <button>Subscibe</button>
+            <button onClick={()=>this.changeMessage()}>Subscibe</button>
         </div>
     ) 
   }
